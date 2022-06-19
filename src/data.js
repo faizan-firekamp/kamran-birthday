@@ -97,6 +97,7 @@ export const data = [
           happiness, peace, and success for you, your family, and FireKamp.
         </p>
         <p className="message__data">May you have a long happy life.</p>
+        <p className="message__data">Happy Birthday</p>
       </>
     ),
   },
