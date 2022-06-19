@@ -13,7 +13,12 @@ const Message = ({ data, requestClose }) => {
       <div className="message__wrapper">
         <div className="message__inner-wrapper">
           <div className="message__main">
-            {data.meme ? <img src={data.meme} alt="data" /> : data.message}
+            <p className="message__data">Hi Kamran,</p>
+            {data.meme ? (
+              <img className="message__meme" src={data.meme} alt="data" />
+            ) : (
+              data.message
+            )}
           </div>
         </div>
         <img src={Confetti} className="message__confetti" alt="plant" />

@@ -20,9 +20,6 @@ body {
 .wrapper {
   position: relative;
   z-index: 1;
-  display: grid;
-  place-items: center;
-  height: 100vh;
 }
 
 .map {
@@ -45,7 +42,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  bottom: 10%;
 }
 
 .button {
@@ -151,7 +147,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -235,5 +231,9 @@ body {
     line-height: 24px;
     font-weight: 600;
     color: #f49c1a;
+  }
+
+  &__meme {
+    height: 400px;
   }
 }

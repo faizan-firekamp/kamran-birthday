@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.scss";
 import map from "./assets/images/map.png";
 import pin from "./assets/images/pin.png";
@@ -12,18 +12,18 @@ import Message from "./Message";
 import { data } from "./data";
 
 const positions = [
-  { left: 120, top: 510 },
-  { left: 315, top: 520 },
-  { left: 290, top: 420 },
-  { left: 400, top: 370 },
-  { left: 505, top: 470 },
-  { left: 630, top: 545 },
-  { left: 860, top: 440 },
-  { left: 980, top: 495 },
-  { left: 1130, top: 410 },
-  { left: 1220, top: 480 },
-  { left: 1360, top: 530 },
-  { left: 1520, top: 470 },
+  { left: 120, top: 240 },
+  { left: 315, top: 250 },
+  { left: 290, top: 150 },
+  { left: 400, top: 100 },
+  { left: 505, top: 200 },
+  { left: 630, top: 275 },
+  { left: 860, top: 170 },
+  { left: 980, top: 215 },
+  { left: 1130, top: 140 },
+  { left: 1220, top: 210 },
+  { left: 1360, top: 260 },
+  { left: 1520, top: 200 },
 ];
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    window.scroll({ top: 0, left: 0 });
+    window.scrollTo({ left: 0, top: 0 });
   }, []);
 
   const currentData = useMemo(() => {
@@ -83,11 +83,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="wrapper">
+      <div>
         <div
           style={{ backgroundImage: `url(${map})` }}
           className="map-overlay"
         />
+      </div>
+      <div className="wrapper">
         <img ref={mapRef} className="map" alt="" src={map} />
         <img
           style={{
