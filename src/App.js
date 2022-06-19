@@ -36,7 +36,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const currentData = useMemo(() => {
-    if (index === 0) return {};
+    if (index === 0 || index === 11) return {};
     return data[index - 1];
   }, [index]);
 
