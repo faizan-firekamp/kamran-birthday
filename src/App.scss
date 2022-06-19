@@ -20,6 +20,9 @@ body {
 .wrapper {
   position: relative;
   z-index: 1;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .map {
@@ -42,6 +45,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+  bottom: 10%;
 }
 
 .button {

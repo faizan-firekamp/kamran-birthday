@@ -5,9 +5,9 @@ import Confetti from "./assets/images/Confetti.png";
 // Users
 import Faizan from "./assets/images/users/faizan.png";
 
-const Message = ({ data }) => {
+const Message = ({ data, requestClose }) => {
   return (
-    <div className="message">
+    <div onClick={requestClose} className="message">
       <img src={Birthday} className="message__birthday" alt="plant" />
       <img src={Plant} className="message__plant" alt="plant" />
       <div className="message__wrapper">
